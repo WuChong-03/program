@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
     // 整数部分处理
     int num = 10;
     printf("整数的代入：値は %d\n", num);
