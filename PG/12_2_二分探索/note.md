@@ -76,68 +76,56 @@ break 的作用：
 
 ## PG课题的猜数应用程序:
 ```c
-//设定一个范围使用二分探索找到想要的数字
+按照流程图使用二分探索(流程图参照同文件夹图片)
 #include <stdio.h>
 int main() {
-    int left = 1;
-    int right = 100;
-    int mid;
-    int isLarger; // 1: 比较大，0: 比较小或相等
-    while (left <= right) {
-        mid = (left + right) / 2;
-        printf("思い浮かべた数字は %d より大きい：Yes なら 1、No なら 0 を入力\n", mid);
-        scanf_s("%d", &isLarger);
+	//検索対象の配列の宣言、初期化
+	int arr[100];	
+	for (int i = 0; i < 100; i++){
+		arr[i] = i + 1;
+	}
+	//検索する値の宣言、初期化
+	int seachValue;
+	//最小、最大要素、中間要素値のindex（添え字）の宣言、初期化
+	int size = sizeof(arr) / sizeof(arr[0]);
+	int low = 0, high = size - 1 , mid;
+	//大きいか小さいかのフラグ
+	int input = 0;
 
-        if (isLarger == 1) {
-            left = mid + 1;
-        }
-        else {
-            right = mid - 1;
-        }
+	printf("思い浮かべた数字(1~100)を入力してください\n");
+	scanf_s("%d", &seachValue);
 
-        if (left == right) {
-            printf("思い浮かべた数字は %d\n", left);
-            break;
-        }
-    }
+
+	while (low <= high) {
+		mid = (low + high) / 2;
+
+		if (arr[mid] == seachValue){
+			printf("思い浮かべた数字は%dですね", arr[mid]);
+			break;
+		}
+		printf("思い浮かべた数字は%dより大きいですか？(1:大きい, ０:小さい)\n", arr[mid]);
+		scanf_s("%d", &input);
+
+		if (arr[mid] < seachValue && input == 1 ){
+			low = mid + 1;
+		}
+		if (arr[mid] > seachValue && input == 0){
+			high = mid - 1;
+		}
+	}
     return 0;
 }
 ```
+| 轮次 | \[low, high] 区间索引 | mid索引 | mid值 arr\[mid] | 问题       | 输入 | 区间更新      |
+| -- | ----------------- | ----- | -------------- | -------- | -- | --------- |
+| 1  | \[0, 99]          | 49    | 50             | 33 > 50? | 0  | high = 48 |
+| 2  | \[0, 48]          | 24    | 25             | 33 > 25? | 1  | low = 25  |
+| 3  | \[25, 48]         | 36    | 37             | 33 > 37? | 0  | high = 35 |
+| 4  | \[25, 35]         | 30    | 31             | 33 > 31? | 1  | low = 31  |
+| 5  | \[31, 35]         | 33    | 34             | 33 > 34? | 0  | high = 32 |
+| 6  | \[31, 32]         | 31    | 32             | 33 > 32? | 1  | low = 32  |
+| 7  | \[32, 32]         | 32    | 33             | 命中！      | -  | break;    
 
-假设用此方法输出33:
+**当 low 与 high 相等时，(low + high) / 2 的结果也等于它们自身**
 
-第一遍
-    mid = (1 + 100) / 2 = 50
-
-    问：33 > 50 吗？用户输入 0
-    → right = 50 - 1 = 49
-第二遍
-    mid = (1 + 49) / 2 = 25
-    
-    问：33 > 25 吗？用户输入 1
-    → left = 25 + 1 = 26
-第三遍
-    mid = (26 + 49) / 2 = 37
-
-    问：33 > 37 吗？用户输入 0
-    → right = 37 - 1 = 36
-第四遍
-    mid = (26 + 36) / 2 = 31
-
-    问：33 > 31 吗？用户输入 1
-    → left = 31 + 1 = 32
-第五遍
-    mid = (32 + 36) / 2 = 34
-
-    问：33 > 34 吗？用户输入 0
-    → right = 34 - 1 = 33
-第六遍
-    mid = (32 + 33) / 2 = 32....(小数省略)
-    
-    问：33 > 32 吗？用户输入 1
-    → left = 32 + 1 = 33
-
-这时 left == 33，right == 33
-下一次判断：left == right，触发printf：
-思い浮かべた数字は 33
-
+**mid 不再变化，也就意味着搜索已经缩小到只剩一个数。**

@@ -1,5 +1,17 @@
 ﻿  main.cpp
-D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(40,6): warning C4189: “graphHandle2”: 局部变量已初始化但不引用
-  矩形碰撞判定.vcxproj -> D:\Program\AL\2_3_矩形碰撞判定\Generated\Outputs\Debug\矩形碰撞判定.exe
-  复制了 0 个文件
-  复制了 0 个文件
+D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(41,6): error C2374: “graphHandle1”: 重定义；多次初始化
+      D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(39,6):
+      参见“graphHandle1”的声明
+  
+D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(41,6): error C2086: “int graphHandle1”: 重定义
+      D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(39,6):
+      参见“graphHandle1”的声明
+  
+D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(42,6): error C2374: “graphHandle2”: 重定义；多次初始化
+      D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(40,6):
+      参见“graphHandle2”的声明
+  
+D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(42,6): error C2086: “int graphHandle2”: 重定义
+      D:\Program\AL\2_3_矩形碰撞判定\矩形碰撞判定\main.cpp(40,6):
+      参见“graphHandle2”的声明
+  
