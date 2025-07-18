@@ -45,30 +45,25 @@
 
 ```c
 // 世界坐标（WCS）中的逻辑位置与大小
-float posX = ...;
-float posY = ...;
-float radius = 1.0f;  // 世界中设定为1单位
+float posX, posY, radius;
 
-// 屏幕绘图设定
-float dX = 100.0f;
-float dY = 200.0f;
-float scale = 50.0f;  // 1单位 = 50像素
+// 世界坐标（WCS）中的屏幕原点位置, 缩放比率
+const float scale = 1.0f;
+const float screenOriginX = 600.0f;
+const float screenOriginY = 400.0f;
 
-// Step1: 平移（T）
-posX += dX;
-posY += dY;
-
-// Step2: 缩放 + Y轴反转（S）
-float drawX = posX * scale;
-float drawY = -posY * scale;
+// 平移 + 缩放 + 轴向
+float drawX = posX * scale + screenOriginX;
+float drawY = -posY * scale + screenOriginY;
 float drawRadius = radius * scale;  // ✔️ 半径也要缩放
 
-// Step3: 绘图
+// 绘图
 Novice::DrawEllipse(
     (int)drawX, (int)drawY,
     (int)drawRadius, (int)drawRadius,
     0.0f, WHITE, kFillModeSolid
 );
+
 ```
 
 以后如果需要物体旋转、以角色为中心卷轴、，就可以扩展 R（旋转）、和引入中心点偏移.本次更新先不赘述
