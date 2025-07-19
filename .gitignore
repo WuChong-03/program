@@ -1,0 +1,36 @@
+# ========== Visual Studio 和 C++ 编译缓存 ==========
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# C++ 中间产物
+*.obj
+*.exe
+*.ilk
+*.pdb
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+
+# Copilot 索引缓存
+**/CopilotIndices/
+
+# 编译输出
+**/Generated/
+**/Release/
+**/Debug/
+**/Outputs/
+
+# VS 生成的文件索引
+**/FileContentIndex/
+**/Browse.VC.db*
+**/CodeChunks.db*
+**/SemanticSymbols.db*
+
+# ========== 你自己的图像资源等可以手动添加 ==========
+# 比如你想上传 Circle.png 就不要写 *.png
