@@ -1,7 +1,7 @@
 # AL_2_03_AABB型HitBox
 
 ## 简单介绍:
-AABB 全称是 **Axis-Aligned Bounding Box** , 是最常见的一种 **HitBox** 
+AABB的全称是 **Axis-Aligned Bounding Box** , 是最常见的一种 **HitBox** 
 
 |英语|中文|
 |---|---|
