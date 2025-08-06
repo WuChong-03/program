@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+	int arr[] = { 7, 5, 6, 3, 4 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+	printf("挿入ソート前の配列: ");
+	for (int i = 0; i < size; i++) {
+		printf("%d ", arr[i]);
+	}
+	for (int i = 1; i < size; i++) {
+		int temp = arr[i];
+		int j = i - 1;
+		while (j >= 0 && arr[j] > temp) {
+			arr[j + 1] = arr[j];
+			j--;
+		}
+		arr[j + 1] = temp;
+	}
+
+	printf("\n挿入ソート後の配列: ");
+	for (int i = 0; i < size; i++) {
+		printf("%d ", arr[i]);
+	}
+
+	return 0;
+}

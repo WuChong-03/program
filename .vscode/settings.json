@@ -1,3 +1,21 @@
 {
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "cSpell.words": [
+        "atoi",
+        "Bjarne",
+        "ctype",
+        "difftime",
+        "isalpha",
+        "isdigit",
+        "malloc",
+        "Ritchie",
+        "scanf",
+        "stdlib",
+        "strcat",
+        "strcmp",
+        "strcpy",
+        "Stroustrup",
+        "tolower",
+        "toupper"
+    ]
 }
