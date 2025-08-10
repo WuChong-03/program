@@ -1,8 +1,7 @@
-
 # 标准函数 printf() 
 `printf()` 是 C 语言中**用于输出信息**的标准函数，来自标准库 `<stdio.h>`。
 
-它的全称来自 **“print formatted”**，意思是“格式化输出”。
+它的全称来自 “print formatted”，意思是“格式化输出”。
 
 ---
 

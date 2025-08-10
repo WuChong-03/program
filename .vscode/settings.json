@@ -5,6 +5,7 @@
         "Bjarne",
         "ctype",
         "difftime",
+        "getchar",
         "isalpha",
         "isdigit",
         "malloc",
