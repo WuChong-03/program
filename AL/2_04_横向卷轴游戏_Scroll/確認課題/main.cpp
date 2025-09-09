@@ -116,7 +116,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 
 
 #pragma region デバッグ表示
-		Novice::ScreenPrintf(10, 10, "Player Pos(WCS): %.2f, %.2f", player.worldPos.x, player.worldPos.y);
+		Novice::ScreenPrintf(10, 10, "哈啊哈Player Pos(WCS): %.2f, %.2f", player.worldPos.x, player.worldPos.y);
 		Novice::ScreenPrintf(10, 40, "Player Pos(SCS): %.2f, %.2f", player.screenPos.x, player.screenPos.y);
 		Novice::ScreenPrintf(10, 100, "scrollLineX(SCS): %.2f", scrollLineX);
 		Novice::ScreenPrintf(10, 130, "scrollX: %.2f", scrollX);
