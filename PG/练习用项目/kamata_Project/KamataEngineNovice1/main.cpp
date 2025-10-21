@@ -9,7 +9,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	char keys[256] = { 0 };
 	char preKeys[256] = { 0 };
 
-	float playerX = 641.0f;
+	float playerX = 646.0f;
 	float playerY = 320.0f;
 	float playerSpeed = 15.0f;
 
