@@ -129,3 +129,7 @@ int main() {
 **当 low 与 high 相等时，(low + high) / 2 的结果也等于它们自身**
 
 **mid 不再变化，也就意味着搜索已经缩小到只剩一个数。**
+
+### 考试题目:
+
+https://docs.google.com/forms/d/e/1FAIpQLScdpkADf4bD5oS-zZ_xr9KEVbDGYY81FSS5Es2vp7tfu5gVzw/viewscore?viewscore=AE0zAgDc1FaaT4Oy-iLFfbtIoBmKA3Aouhgamm_8PwH5kP4UE1A1FwbBxqh6fI863w
